@@ -1,0 +1,23 @@
+<div class="ekart-product-container">
+    <!-- <p>product-list works!</p> -->
+     <!--
+    <img [src] = "product.pImage" alt="iphone image">
+    <p>Name: {{product.name}}</p>
+    <p>Price: {{ '$' + product.price}}</p>
+    <p>Color: {{product.color}}</p>
+    <p>Discounted Price: {{'$' +(product.price - (product.price * product.discount / 100))}}</p> 
+    <p>Discountd Price : $ {{getDiscountedPrice().toFixed(2)}}</p>
+    <p>{{product.inStock > 0 ? 'only ' + product.inStock + ' items left.' : 'no in stock'}}</p>
+    <button [disabled]="addToCart == 0" (click)="decrementCartValue()">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="incrementCartvalue()">+</button>
+     <input type="text" [value]="name" (input)="onNameChange($event)">
+    <p>name = {{name}}</p> -->
+    <app-search (searchtextChanged) = setSearchText($event)></app-search><br>
+    <!-- <div *ngFor = "let item of userList">
+        <p>Current element of an array is: {{item}}</p>
+    </div> -->
+    
+    <product-list [searchText] = "searchText" #productListComponent></product-list>
+    <product-detail *ngIf="productListComponent.selectedProduct"></product-detail>
+</div>

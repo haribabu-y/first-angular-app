@@ -1,0 +1,53 @@
+<!-- <p>product-list works!</p> -->
+ <app-filter 
+    [all]='allProducts' 
+    [inStock] = 'inStockProducts' 
+    [outOfstock]='outOfStockProducts'
+    (selectedRadiobuttonChanged) = "onFilterChanged($event)"
+    ></app-filter>
+ <div class="ekart--product--container">
+    <!-- <div class="ekart--product--item" *ngFor="let product of products">
+        <div class="ekart-wishlist-sale-container">
+            <div class="ekart--add--to--wishlist">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            </div>
+            <div class="ekart-on-sale-tag" *ngIf="product.discountPrice">{{(100 - (product.discountPrice / product.price * 100)).toFixed()}}% OFF</div>
+        </div>
+        <div class="ekart--product--image">
+            <img [src]="product.imageURL" class="ekart--product--image">
+        </div>
+        <div class="ekart--add--to--price">
+            {{product.price}}
+        </div>
+        <div class="ekart--product--name">{{product.name}}</div>
+        <div class="ekart--product--category">{{product.gender}} . {{product.category}} . {{product.brand}}</div>
+        <div class="ekart--product--available-colors">{{product.color.length}} Colors . Best Seller</div>
+        <div class="ekart--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: product.is_in_inventory ? 'green' : 'red'} ">
+            {{ product.is_in_inventory ? 'In Stock' : 'Out of Stock' }}
+        </div>
+    </div> -->
+    <!-- <div *ngFor="let product of products" (click) = "selectedProduct = product"> -->
+        <!-- *ngIf = "(selectedFilterRadiobutton === 'all') || ((product.is_in_inventory).toString() === selectedFilterRadiobutton)" -->
+         <!-- *ngIf="searchText === '' || product.name.toLocaleLowerCase().includes(searchText)" -->
+        <!-- <app-product [product]="product" *ngIf="product.is_in_inventory === (selectedFilterRadiobutton === 'true') || selectedFilterRadiobutton === 'all'"></app-product> -->
+         <!-- <div *ngIf="selectedFilterRadiobutton ==='all' || product.is_in_inventory.toString() === selectedFilterRadiobutton">
+            <app-product [product]="product"></app-product>
+         </div> -->
+        <!-- <app-product [product]="product" *ngIf="searchText === '' || product.name.toLocaleLowerCase().includes(searchText)"></app-product> -->
+
+        <!-- <p *ngIf="product.is_in_inventory">{{product}}</p> -->
+    <!-- </div> -->
+     <!-- <div *ngFor="let product of products" (click)="selectedProduct = product">
+  <app-product
+    [product]="product"
+    *ngIf="selectedFilterRadiobutton === 'all' || product.is_in_inventory === (selectedFilterRadiobutton === 'true')">
+  </app-product>
+</div> -->
+
+<ng-container *ngFor="let product of products">
+    <div *ngIf="selectedFilterRadiobutton === 'all' || product.is_in_inventory === (selectedFilterRadiobutton === 'true')" (click)="selectedProduct = product">
+        <app-product [product]="product"></app-product>
+    </div>
+</ng-container>
+
+</div>

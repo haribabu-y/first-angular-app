@@ -1,7 +1,0 @@
-<!-- <p>product-list works!</p> -->
- <p>Name: {{product.name}}</p>
- <p>Price: {{ '$' + product.price}}</p>
- <p>Color: {{product.color}}</p>
- <!-- <p>Discounted Price: {{'$' +(product.price - (product.price * product.discount / 100))}}</p> -->
-  <p>Discountd Price : $ {{getDiscountedPrice().toFixed(2)}}</p>
-  <p>{{product.inStock > 0 ? 'only ' + product.inStock + ' items left.' : 'no in stock'}}</p>
