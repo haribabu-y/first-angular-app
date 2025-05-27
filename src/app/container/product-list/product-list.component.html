@@ -45,7 +45,8 @@
 </div> -->
 
 <ng-container *ngFor="let product of products">
-    <div *ngIf="selectedFilterRadiobutton === 'all' || product.is_in_inventory === (selectedFilterRadiobutton === 'true')" (click)="selectedProduct = product">
+    <!-- *ngIf="selectedFilterRadiobutton === 'all' || product.is_in_inventory === (selectedFilterRadiobutton === 'true')" -->
+    <div *ngIf="searchText === '' || product.name.toLocaleLowerCase().includes(searchText)" (click)="selectedProduct = product">
         <app-product [product]="product"></app-product>
     </div>
 </ng-container>

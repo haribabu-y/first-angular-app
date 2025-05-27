@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -52,4 +53,6 @@ export class ContainerComponent {
     // console.log(this.searchText);
     
   }
+
+  @ViewChild(ProductListComponent) productListComponent: ProductListComponent;
 }

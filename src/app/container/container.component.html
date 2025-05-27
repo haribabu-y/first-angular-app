@@ -19,5 +19,45 @@
     </div> -->
     
     <product-list [searchText] = "searchText" #productListComponent></product-list>
-    <product-detail *ngIf="productListComponent.selectedProduct"></product-detail>
+    <product-detail *ngIf="productListComponent.selectedProduct" [productListComp] = "productListComponent"></product-detail>
+
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h1>Latest Arraival in popural brands</h1>
+        </div>
+        <featured-brands>
+            <h3 class="title">New arrivals in Nike</h3>
+            <button class="call-to-action">Show new arrivals in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New arrivals in Adidas</h3>
+            <button class="call-to-action">Show new arrivals in Adidas</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New arrivals in Roobok</h3>
+            <button class="call-to-action">Show new arrivals in Roobok</button>
+        </featured-brands>
+        <!-- <div class="ekart-featured-product-item">
+            <h3 class="title">New arrivals in Nike</h3>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consequatur voluptas quo numquam officiis, veritatis odio ad ducimus est ratione delectus sapiente laboriosam optio error molestias tempore eum, rem reprehenderit!
+            </p>
+            <button class="call-to-action">Learn More</button>
+        </div>
+        <div class="ekart-featured-product-item">
+            <h3 class="title">New arrivals in Adidas</h3>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consequatur voluptas quo numquam officiis, veritatis odio ad ducimus est ratione delectus sapiente laboriosam optio error molestias tempore eum, rem reprehenderit!
+            </p>
+            <button class="call-to-action">Learn More</button>
+        </div>
+        <div class="ekart-featured-product-item">
+            <h3 class="title">New arrivals in Roobok</h3>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consequatur voluptas quo numquam officiis, veritatis odio ad ducimus est ratione delectus sapiente laboriosam optio error molestias tempore eum, rem reprehenderit!
+            </p>
+            <button class="call-to-action">Learn More</button>
+        </div> -->
+
+    </div>
 </div>
