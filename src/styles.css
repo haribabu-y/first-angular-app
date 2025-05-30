@@ -17,3 +17,9 @@ a {
     padding: 0 10px;
     color: #28282b;
 }
+
+
+.disable-out-of-stock-product {
+    background-color: #28282b;
+    opacity: 0.6;
+}

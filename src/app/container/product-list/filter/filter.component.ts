@@ -20,7 +20,9 @@ export class FilterComponent {
 
   onSelectedRadioButton() {
     console.log('onselectedRadioButton aised');    
-    console.log(this.selectedRadiobutton);    
+    console.log(this.selectedRadiobutton); 
+    // console.log('hi');
+       
     this.selectedRadiobuttonChanged.emit(this.selectedRadiobutton);
   }
 }
